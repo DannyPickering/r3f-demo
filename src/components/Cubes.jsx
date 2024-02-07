@@ -7,24 +7,24 @@ export function Cubes(props) {
   const cubesRef = useRef()
   const tl = useRef()
 
-  const scroll = useScroll()
+  // const scroll = useScroll()
 
-  useFrame(() => {
-    tl.current.seek(scroll.offset * tl.current.duration())
-  })
+  // useFrame(() => {
+  //   tl.current.seek(scroll.offset * tl.current.duration())
+  // })
 
-  useLayoutEffect(() => {
-    tl.current = gsap.timeline()
+  // useLayoutEffect(() => {
+  //   tl.current = gsap.timeline()
 
-    tl.current.to(
-      cubesRef.current.position,
-      {
-        duration: 1,
-        y: 1.2
-      },
-      0
-    )
-  }, [])
+  //   tl.current.to(
+  //     cubesRef.current.position,
+  //     {
+  //       duration: 1,
+  //       y: 1.2
+  //     },
+  //     0
+  //   )
+  // }, [])
 
   return (
     <group {...props} dispose={null} ref={cubesRef}>
